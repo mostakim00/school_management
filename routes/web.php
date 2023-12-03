@@ -79,7 +79,8 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('/list-store-out',[StoreOutController::class,'index'])->name('store_out.index');
     Route::get('/create-new-store-out',[StoreOutController::class,'create'])->name('store_out.create');
 
-
+    //<--route for Classroom -->
+    Route::get('/index',[\App\Http\Controllers\ClassroomController::class, 'index'])->name('/classroom.index');
 
 });
 

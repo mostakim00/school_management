@@ -2,7 +2,7 @@
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto"><a class="navbar-brand" href="">
-                    <h2 class="brand-text mb-0">Brand Name</h2>
+                    <h2 class="brand-text mb-0">SMS</h2>
                 </a></li>
             <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
         </ul>
@@ -103,6 +103,12 @@
                     </li>
                 </ul>
             </li>
+            <li class=" {{(in_array($routeName,$product_route ) !== false ) ? 'open':''}} nav-item"><a href="#"><i class="feather icon-menu"></i><span class="menu-title" data-i18n="Menu Levels">Classroom</span></a>
+                <ul class="menu-content">
+                    <li class=" {{Request::routeIs('brand.index') ? 'active' : ''}} nav-item"><a href="{{route('brand.index')}}"><i class="feather icon-bold"></i><span class="menu-title" data-i18n="Brand">Create class</span></a>
+                    </li>
+
+                </ul>
         </ul>
     </div>
 </div>
