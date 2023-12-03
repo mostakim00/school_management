@@ -103,11 +103,10 @@
                     </li>
                 </ul>
             </li>
-            <li class=" {{(in_array($routeName,$product_route ) !== false ) ? 'open':''}} nav-item"><a href="#"><i class="feather icon-menu"></i><span class="menu-title" data-i18n="Menu Levels">Classroom</span></a>
+            <li class=" {{(in_array($routeName,$product_route ) !== false ) ? 'open':''}} nav-item"><a href=""><i class="feather icon-menu"></i><span class="menu-title" data-i18n="Menu Levels">Classroom</span></a>
                 <ul class="menu-content">
-                    <li class=" {{Request::routeIs('brand.index') ? 'active' : ''}} nav-item"><a href="{{route('brand.index')}}"><i class="feather icon-bold"></i><span class="menu-title" data-i18n="Brand">Create class</span></a>
+                    <li class=" {{Request::routeIs('classroom.index') ? 'active' : ''}} nav-item"><a href="{{ route('classroom.index') }}"><i class="feather icon-bold"></i><span class="menu-title" data-i18n="Brand">Create class</span></a>
                     </li>
-
                 </ul>
         </ul>
     </div>
