@@ -1,9 +1,10 @@
 @extends('backend.template.template')
 @section('title', 'Table')
 @section('main')
+
     <section class="mb-1">
         <div class="col-12">
-            <h2 class="content-header-title float-left mb-0">Brand</h2>
+            <h2 class="content-header-title float-left mb-0">Classroom</h2>
             <div class="breadcrumb-wrapper col-12">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a>
@@ -14,7 +15,7 @@
             </div>
             <div class="col-12 top_btn">
                 <div class="btn-group">
-                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#brand"><span><i class="feather icon-plus"></i>&nbsp; Add New Class</span></button>
+                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#brand"><span><i class="feather icon-plus"></i>&nbsp;Add New Class</span></button>
                 </div>
             </div>
         </div>
@@ -37,13 +38,16 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Class Nine</td>
-                                        <td>A</span></td>
-                                        <td>Abdul Kalam</span></td>
-                                        <td>50</span></td>
-                                    </tr>
+                                    @php $i = 1 @endphp
+                                    @foreach($classroom as $data)
+                                        <tr>
+                                            <td>{{ $i++ }}</td>
+                                            <td>{{ $data->class_name}}</td>
+                                            <td>{{ $data->section}}</td>
+                                            <td>{{ $data->class_teacher }}</td>
+                                            <td>{{ $data->number_of_student }}</td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -63,33 +67,26 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="form form-vertical">
+                        <form class="form form-vertical" method="post" action="{{route('classroom.store')}}">
+                            @csrf
                             <div class="form-body">
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-group">
                                             <label for="first-name-vertical">Class Name </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="brand_name" placeholder="Brand Name">
+                                            <input type="text" id="first-name-vertical" class="form-control" name="class_name" placeholder="Class Name">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Section</label>
-                                            <textarea class="form-control" placeholder="Brand Description"></textarea>
+                                            <label for="first-name-vertical">Section </label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="section" placeholder="section">
                                         </div>
-
                                         <div class="form-group">
-                                            <label for="select">Class teacher</label>
-                                            <ul class="list-unstyled mb-0">
-                                                <li class="d-inline-block mr-2">
-                                                </li>
-                                                <li class="d-inline-block mr-2">
-                                                    <fieldset>
-                                                        <label>
-                                                            <input type="radio" name="radio">
-                                                            Inactive
-                                                        </label>
-                                                    </fieldset>
-                                                </li>
-                                            </ul>
+                                            <label for="first-name-vertical">Class Teacher Name </label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="class_teacher" placeholder="Class Teacher Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="first-name-vertical">Number Of Student </label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
                                         </div>
                                         <div class=" modal-footer">
                                             <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>

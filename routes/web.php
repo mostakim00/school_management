@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\UnitController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\StoreInController;
 use App\Http\Controllers\Backend\StoreOutController;
+use App\Http\Controllers\Backend\StudentController;
 use App\Http\Controllers\Backend\ClassroomController;
 use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\ActivityLogController;
@@ -81,10 +82,14 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('/create-new-store-out',[StoreOutController::class,'create'])->name('store_out.create');
 
     //<--route for Classroom -->
-    Route::get('/index',[\App\Http\Controllers\Backend\ClassroomController::class, 'index'])->name('classroom.index');
-
+    Route::get('/index', [\App\Http\Controllers\Backend\ClassroomController::class, 'index'])->name('classroom.index');
+    Route::post('/store', [\App\Http\Controllers\Backend\ClassroomController::class, 'store'])->name('classroom.store');
 });
 
+    //<--route for Student -->
+    Route::group(['prefix' => 'student'], function (){
+        Route::get('/index', [\App\Http\Controllers\Backend\StudentController::class, 'index'])->name('student.index');
+    });
 
 
 

@@ -108,6 +108,13 @@
                     <li class=" {{Request::routeIs('classroom.index') ? 'active' : ''}} nav-item"><a href="{{ route('classroom.index') }}"><i class="feather icon-bold"></i><span class="menu-title" data-i18n="Brand">Create class</span></a>
                     </li>
                 </ul>
+            </li>
+            <li class=" {{(in_array($routeName,$product_route ) !== false ) ? 'open':''}} nav-item"><a href=""><i class="feather icon-menu"></i><span class="menu-title" data-i18n="Menu Levels">Student</span></a>
+                <ul class="menu-content">
+                    <li class=" {{Request::routeIs('classroom.index') ? 'active' : ''}} nav-item"><a href="{{ route('student.index') }}"><i class="feather icon-bold"></i><span class="menu-title" data-i18n="Brand">Create student</span></a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
