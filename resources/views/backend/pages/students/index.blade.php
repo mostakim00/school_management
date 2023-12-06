@@ -43,7 +43,6 @@
                                         <th>Mother's Name</th>
                                         <th>Contact Number</th>
                                         <th>Guardian Contact Number</th>
-                                        <th>Transport</th>
                                         <th>Image</th>
                                     </tr>
                                     </thead>
@@ -81,66 +80,62 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form style="height: 500px"  class="form form-vertical" method="post" action="{{route('classroom.store')}}">
+                        <form style="height: 500px"  class="form form-vertical" method="post" action="{{route('student.store')}}">
                             @csrf
                             <div class="form-body">
                                 <div class="row">
                                     <div style="" class="col-12">
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Class Name </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="class_name" placeholder="Class Name">
+                                            <label for="first-name-vertical">Student Name</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="name" placeholder="Class Name">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Section </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="section" placeholder="section">
+                                            <label for="first-name-vertical">Student Id</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="student_id" placeholder="section">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Class Teacher Name </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="class_teacher" placeholder="Class Teacher Name">
+                                            <label for="first-name-vertical">E-mail</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="e_mail" placeholder="Class Teacher Name">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Date of birth</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="dob" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Class</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="class" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Section</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="section" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Roll No.</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="roll_no" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Address</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="address" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Father's name</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="fathers_name" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Mother's name</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="mothers_name" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Contact Number</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="contact_no" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Guardian Contact Number</label>
+                                            <input type="text" id="first-name-vertical" class="form-control" name="guardian_contact_no" placeholder="Number Of Student">
                                         </div>
                                         <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="first-name-vertical">Number Of Student </label>
-                                            <input type="text" id="first-name-vertical" class="form-control" name="number_of_student" placeholder="Number Of Student">
+                                            <label for="first-name-vertical">Image</label>
+                                            <input type="file" id="first-name-vertical" class="form-control" name="image">
                                         </div>
                                         <div class=" modal-footer">
                                             <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>

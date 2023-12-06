@@ -89,6 +89,7 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     //<--route for Student -->
     Route::group(['prefix' => 'student'], function (){
         Route::get('/index', [\App\Http\Controllers\Backend\StudentController::class, 'index'])->name('student.index');
+        Route::post('/store', [\App\Http\Controllers\Backend\StudentController::class, 'store'])->name('student.store');
     });
 
 
